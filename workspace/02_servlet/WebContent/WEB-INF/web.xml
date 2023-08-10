@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>02_servlet</display-name>
+  
+  <!-- ServletContext => 서블릿 태그 밖에서 쓰임. 모든 서블릿에서 사용 가능 -->
+  <context-param>
+  	<param-name>userid</param-name>
+  	<param-value>asdf</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>passwd</param-name>
+  	<param-value>1234</param-value>
+  </context-param>
+  
+  <!-- ServletConfig => 해당 서블릿에서만 사용 가능-->
+  <servlet>
+        <servlet-name>TestServlet</servlet-name>
+        <servlet-class>com.servlet.TestServlet</servlet-class>
+        <init-param>
+            <param-name>dir_path</param-name>
+            <param-value>c:\\temp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>email</param-name>
+            <param-value>aaa@google.com</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>ExamServlet</servlet-name>
+        <servlet-class>com.servlet.ExamServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExamServlet</servlet-name>
+        <url-pattern>/exam</url-pattern>
+    </servlet-mapping>
+</web-app>
