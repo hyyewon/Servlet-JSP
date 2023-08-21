@@ -26,7 +26,7 @@
 조회수 <%=dto.getReadcnt() %><br>
 제목: <input type="text" name="title" value="<%=title %>"><br>
 작성자: <input type="text" name="author" value="<%=author %>"><br>
-내용: <textarea rows="10" cols="10" name="content"><%=content %>></textarea>
+내용: <textarea rows="10" cols="10" name="content"><%=content %></textarea>
 <input type="submit" value="수정">
 </form>
 <a href="list">목록</a>
